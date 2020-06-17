@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Request a Gig</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" class="ion-margin-top">
+       
+          <ion-avatar class="avatars">
+            <img [src]="data.imageLink">
+          </ion-avatar>
+          <h2 class="ion-text-center">{{data.Infulencer_name}}</h2>
+     
+        
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+
+        <ion-item>
+          <ion-label>Select Gig</ion-label>
+        <ion-select  okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="Personal video">Personal video</ion-select-option>
+          <ion-select-option value="Personal Tweet ">Personal Tweet </ion-select-option>
+          <ion-select-option value="Post Status ">Post Status </ion-select-option>
+         
+        </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input  required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Instructions</ion-label>
+         <ion-textarea  rows="4" cols="20" 
+         ></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label>Instruction Video (Optional) </ion-label>
+        </ion-item>
+        
+          
+          <ion-item> 
+          <ion-input type="file" [accept]></ion-input>
+        </ion-item>
+       
+     
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" class="ion-text-center" >
+        <ion-button color="primary" shape="round" fill="outline"
+        (click)="presentToast()"
+       
+        >  Book for <i class="fa fa-inr" aria-hidden="true"></i> <b> 1000</b></ion-button>
+       
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

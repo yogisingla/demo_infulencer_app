@@ -1,0 +1,37 @@
+<ion-content>
+  <div style="padding:2rem">
+    <img src="assets/logo.png" alt="">
+    <h1>Verify Yourself !</h1>
+    <h3 style="color: grey;">Enter OTP to Continue</h3>
+  </div>
+  <div style="padding:0rem 2rem">
+    <!-- <ion-item>
+      <ion-label position="floating">One Time Password ( OTP )</ion-label>
+      <ion-input type='number'></ion-input>
+    </ion-item> -->
+
+    <ion-grid>
+      <ion-row>
+        <ion-col style="border-bottom: 1px solid black;margin:8px">
+          <ion-input type='number' max="10"></ion-input>
+
+        </ion-col>
+        <ion-col style="border-bottom: 1px solid black;margin:8px">
+          <ion-input type='number' length='1'></ion-input>
+        </ion-col>
+        <ion-col style="border-bottom: 1px solid black;margin:8px">
+          <ion-input type='number' length='1'></ion-input>
+        </ion-col>
+        <ion-col style="border-bottom: 1px solid black;margin:8px">
+          <ion-input type='number' length='1'></ion-input>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+    <br>
+    <ion-button (click)="verify()" expand="block" shape="round">Login</ion-button>
+  </div>
+
+
+</ion-content>

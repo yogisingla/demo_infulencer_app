@@ -1,0 +1,34 @@
+<ion-content>
+  <div style="padding:2rem">
+    <img src="assets/logo.png" alt="">
+    <h1>Welcome,</h1>
+    <h3 style="color: grey;">Sign in to continue</h3>
+
+  </div>
+  <div style="padding:0rem 2rem">
+    <div style="padding:4px">
+      <ion-segment mode='ios' [(ngModel)]="type">
+        <ion-segment-button value="influencer">
+          <ion-label>Influencer</ion-label>
+          <!-- <ion-icon name="logo-facebook" style="color:#39569A"></ion-icon> -->
+        </ion-segment-button>
+
+        <ion-segment-button value="customer">
+          <ion-label>Customer</ion-label>
+          <!-- <ion-icon name="logo-youtube" style="color:red"></ion-icon> -->
+        </ion-segment-button>
+
+      </ion-segment>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input type='number'></ion-input>
+    </ion-item>
+
+    <br>
+    <ion-button (click)="login()" expand="block" shape="round">Verify</ion-button>
+  </div>
+
+
+</ion-content>

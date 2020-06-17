@@ -1,0 +1,94 @@
+<ion-content style="text-align: center;">
+  <div>
+    <div style="height: 100%">
+
+      <img src="../../../assets/icon/Cristiano.png" alt="profilepic">
+
+      <ion-card style="height: 100%">
+        <ion-button color="light" expand="full" fill="clear">
+          <ion-icon name="settings" slot="icon-only" color="dark" class="settings"></ion-icon>
+        </ion-button>
+
+        <ion-card-header class="head">
+          <ion-card-title>
+            <h6 style="color: darkgray;"> Profile Name
+            </h6>
+            <h5>wobb.in/username
+              <a>
+                <ion-icon name="pencil" slot="icon-only" color="dark" class="create"></ion-icon>
+              </a>
+            </h5>
+          </ion-card-title>
+          <ion-card-subtitle style="text-align: left;color: black;">About</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content class="content">
+          <a>
+            <ion-icon name="pencil" slot="icon-only" color="dark" class="creates"></ion-icon>
+          </a>
+          Cristiano Ronaldo is a Portuguese professional footballer.
+
+        </ion-card-content>
+
+        <ion-toolbar>
+          <ion-segment value="instagram" color="danger" [(ngModel)]="segment">
+            <ion-segment-button value="instagram">Instagram</ion-segment-button>
+            <ion-segment-button value="youtube">Youtube</ion-segment-button>
+          </ion-segment>
+          <div [ngSwitch]="segment" *ngIf="!afterAuthorisation" >
+            <div *ngSwitchCase="'instagram'">
+              <ion-button class="insta" size="medium" shape="round" (click)="insta()">Connect To Instagram</ion-button>
+              <ion-button class="insta" size="medium" shape="round" routerLink="/create-gig"> Create Your Gig </ion-button>
+            </div>
+          </div>
+          <div  *ngIf="afterAuthorisation" style="margin-top: 10%;">
+            <!-- <ion-card style="margin-top: 10%;">
+              <ion-card-content>
+                <div fxLayout="row" fxLayoutAlign="end center" fxHide.gt-sm="true">
+                  <h3>user name</h3>
+                  @{{userInstaData.username}}
+                </div>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                  <img mat-card-md-image [src]="userInstaData.profile_pic_url">
+                  <h3>Full Name</h3>
+                  <h3>{{userInstaData.full_name}}</h3>
+              </div>
+              </ion-card-content>
+            </ion-card> -->
+            <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlex.gt-sm="25">
+                  <span>124</span>
+                  <p>Followers</p>
+              </div>
+              </ion-col>
+              <ion-col>
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlex.gt-sm="25">
+                  <span>24</span>
+                  <p>Following</p>
+              </div>
+              </ion-col>
+              <ion-col>
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlex.gt-sm="25">
+                  <span>110</span>
+                  <p>Product Likes</p>
+              </div>
+              </ion-col>
+              <ion-col>
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlex.gt-sm="25">
+                  <span>124</span>
+                  <p>Product Sold</p>
+              </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+            
+          </div>
+        </ion-toolbar>
+
+
+      </ion-card>
+    </div>
+    
+  </div>
+</ion-content>
